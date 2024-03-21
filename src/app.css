@@ -1,3 +1,61 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+*,
+body {
+  font-size: 14px;
+}
+
+.control {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+input,
+select {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #0f0c0c;
+  padding: 8px 10px;
+  font-size: 14px;
+}
+
+.dash {
+  border-bottom: 2px solid rgb(119, 116, 116);
+  padding-bottom: 10px;
+}
+
+.span_option {
+  background-color: #ea4427;
+  color: white;
+  font-weight: 500;
+  left: 0;
+  padding: 2px 6px 6px 6px;
+  margin-left: -15px;
+  border-bottom-right-radius: 4px;
+}
+
+.errors {
+  font-size: 12px;
+  font-style: italic;
+  color: #ea4427;
+}
+
+.custom_icon .Polaris-Icon--toneSubdued svg {
+  color: white;
+}
+
+.Polaris-IndexTable__Table--sticky
+  .Polaris-IndexTable__TableHeading--second.Polaris-IndexTable__TableHeading--unselectable,
+.Polaris-IndexTable__Table--unselectable.Polaris-IndexTable__Table--sticky
+  .Polaris-IndexTable__TableCell:first-child {
+  position: relative !important;
+}
+
+.Polaris-Frame__Main {
+  border: none !important;
+}
