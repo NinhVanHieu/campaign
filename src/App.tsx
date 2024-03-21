@@ -6,6 +6,7 @@ import { ErrorMessage } from "@hookform/error-message"
 import { Data } from './dto/data';
 import Preview from '././components/Preview';
 import { useCallback, useState } from 'react';
+import clsx from 'clsx';
 
 const App = () => {
 
@@ -52,6 +53,7 @@ const App = () => {
   });
 
   const { errors } = formState
+  console.log(`( errors )===============>`, errors);
 
   const onSubmit = (data: Data) => {
     if (data.options.length <= 0) {
@@ -226,7 +228,7 @@ const App = () => {
                                           type="number"
                                           min={1}
                                         />
-                                        <span className='absolute bottom-2 right-8'>%</span>
+                                        <span className={clsx(errors?.options && 'bottom-9', 'absolute bottom-2  right-8')}>%</span>
                                         <ErrorMessage
                                           errors={errors}
                                           name={`options.${index}.amount`}
@@ -252,7 +254,7 @@ const App = () => {
                                           type="number"
                                           min={1}
                                         />
-                                        <span className='absolute bottom-2 right-8'>$</span>
+                                        <span className={clsx(errors?.options && 'bottom-9', 'absolute bottom-2  right-8')}>$</span>
                                         <ErrorMessage
                                           errors={errors}
                                           name={`options.${index}.amount`}
